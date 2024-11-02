@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="logo/logooo-removebg.png" type="image/x-icon">
+    <title>ANZUELO Y FOGATA</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    :root {
+        --primary-color: #4B4B4B; /* Gris oscuro */
+        --secondary-color: #7A7A7A; /* Gris medio */
+        --background-color: #E0E0E0; /* Gris claro */
+        --accent-color: #B0B0B0; /* Gris más claro */
+        --dark-color: #2E2E2E; 
+        --text-color: #1C1C1C; 
+    }
+
+    html {
+        font-size: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .heading-1 {
+        text-align: center;
+        font-weight: 600;
+        font-size: 36px;
+        margin: 30px 0;
+        color: var(--text-color);
+    }
+
+    .container-hero {
+        background-color: var(--background-color);
+    }
+
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .logout-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .logout-link i {
+        margin-right: 6px;
+    }
+
+    .logout-link span {
+        font-size: 13px;
+    }
+
+    .customer-support, .container-logo, .container-user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .customer-support i, .container-logo i, .container-user .fa-user, .container-user .fa-basket-shopping {
+        font-size: 30px;
+        color: var(--primary-color);
+    }
+
+    .customer-support i, .container-user .fa-basket-shopping {
+        font-size: 33px;
+    }
+
+    .container-user .fa-user {
+        padding-right: 25px;
+        border-right: 1px solid #e2e2e2;
+    }
+
+    .container-logo h1 a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+    }
+
+    .container-logo {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        gap: 10px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center; 
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+    }
+
+    .logo img {
+        margin-right: 15px;
+    }
+
+    .container-user .fa-basket-shopping {
+        padding-left: 30px;
+    }
+
+    .navbar {
+        padding: 1.5rem 2.5rem;
+        font-family: "Teko", sans-serif;
+    }
+
+    .nav-link {
+        font-size: 2.1rem;
+        margin-right: 1rem;
+        color: var(--text-color) !important;
+        transition: color 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+        color: var(--primary-color) !important;
+    }
+
+    .dropdown-menu {
+        background-color: var(--primary-color); 
+    }
+
+    .dropdown-item {
+        color: var(--background-color);
+        font-size: 1.8rem;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        color: var(--text-color);
+        background-color: var(--secondary-color);
+    }
+
+    .navbar-toggler {
+        border-color: var(--secondary-color);
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28120, 120, 120, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    form.d-flex {
+        display: flex;
+        align-items: center;
+    }
+
+    input.form-control {
+        padding: 10px 15px;
+        font-size: 17px;
+        border: 2px solid var(--secondary-color);
+        border-radius: 25px 0 0 25px;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+    input.form-control:focus {
+        border-color: var(--text-color);
+    }
+
+    button.btn {
+        padding: 10px 15px;
+        font-size: 17px;
+        border: 2px solid var(--secondary-color);
+        color: var(--text-color);
+        border-radius: 0 10px 10px 0;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        overflow: hidden;
+    }
+
+    @media (max-width: 992px) {
+        .navbar-nav .nav-link {
+            font-size: 1.5rem;
+        }
+        input.form-control,
+        button.btn {
+            font-size: 12px;
+            padding: 8px 15px;
+        }
+    }
+</style>
+
+<header>
+    <div class="container-hero">
+        <div class="container hero">
+            <div class="customer-support">
+                <i class="fa-solid fa-headset"></i>
+                <div class="content-customer-support">
+                    <span class="text" style="font-size: 13px;">Soporte al cliente</span>
+                    <span class="number" style="font-size: 11px;">123-456-7890</span>
+                </div>
+            </div>
+
+            <div class="container-logo" style="font-family: 'Anton SC', sans-serif;">
+                <h1 class="logo"><img src="logo/logooo-removebg.png" style="width: 110px; height: 110px;"><a href=""> Anzuelo y Fogata </a></h1>
+            </div>                
+
+            <div class="container-user">
+                <a href="login.html" class="logout-link"> 
+                    <span>Cerrar Sesión</span>
+                </a>						
+                <a href="login.html"> <i class="fa-solid fa-user"></i> </a>
+                <i class="fa-solid fa-basket-shopping"></i>
+                <div class="content-shopping-cart">
+                    <span class="text" style="font-size: 12px;">Carrito</span>
+                    <span class="number" style="font-size: 12px;">(0)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <a class="nav-link" href="index.html"><i class="fa fa-map" style="padding: 10px;"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="pesca.html"> SECCIÓN DE PESCA </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="camping.html"> SECCIÓN DE CAMPING </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        TIENDA
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"> PESCA </a></li>
+                        <li><a class="dropdown-item" href="#"> CAMPING </a></li>
+                        <li><a class="dropdown-item" href="#"> ÓPTICA </a></li>
+                        <li><a class="dropdown-item" href="#"> CAZA DEPORTIVA </a></li>
+                        <li><a class="dropdown-item" href="#"> INDUMENTARIA </a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> CONTACTO </a>
+                </li>
+            </ul>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+</header>
+
+<head>
+    <link rel="icon" href="logo/logooo-removebg.png" type="image/x-icon">
+    <title> ANZUELO Y FOGATA </title>
+    
+    <link rel="stylesheet" href="stylecamping.css">
+</head>
+
+
+        <section class="banner" style="background-image: linear-gradient(100deg, #000000, #00000020), url('../imgg/banner.jpg');">
+            <div class="content-banner">
+                <p>Equipo de Camping</p>
+                <h2>Explora la Naturaleza <br />con Seguridad</h2>
+                <a href="#">Comprar ahora</a>
+            </div>
+        </section>
+
+        <main class="main-content">
+        <section class="container container-features">
+            <div class="card-feature">
+                <i class="fas fa-tree"></i>
+                <div class="feature-content">
+                    <span>Aventuras al aire libre</span>
+                    <p>Explora la naturaleza con nuestras actividades de camping!</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fas fa-fire"></i>
+                <div class="feature-content">
+                    <span>Fogatas bajo las estrellas</span>
+                    <p>Disfruta de noches mágicas junto al calor de nuestras fogatas.</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fas fa-utensils"></i>
+                <div class="feature-content">
+                    <span>Cocina al aire libre</span>
+                    <p>Prepara deliciosas comidas en nuestro entorno natural.</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fas fa-map-signs"></i>
+                <div class="feature-content">
+                    <span>Rutas de senderismo</span>
+                    <p>Descubre senderos increíbles y vistas panorámicas.</p>
+                </div>
+            </div>
+        </section>
+
+            <section class="container top-categories">
+                <h1 class="heading-1">Mejores Categorías</h1>
+                <div class="container-categories">
+                    <div class="card-category category-rods">
+                        <p>Tiendas de Campaña</p>
+                        <span style="color: #C45151;">Ver más</span>
+                    </div>
+                    <div class="card-category category-reels">
+                        <p>Equipamiento de Cocina</p>
+                        <span style="color: #C45151;">Ver más</span>
+                    </div>
+                    <div class="card-category category-lures">
+                        <p>Linternas y Lámparas</p>
+                        <span style="color: #C45151;">Ver más</span>
+                    </div>
+                </div>
+            </section>
+
+            <style>
+                            
+                            .card-product {
+                                border: 1px solid #ccc;
+                                padding: 10px;
+                                margin: 10px;
+                                width: 200px;
+                                display: inline-block;
+                                vertical-align: top;
+                                text-align: center;
+                            }
+                            .card-product img {
+                                max-width: 100%;
+                                height: auto;
+                            }
+                            .card-product h3 {
+                                font-size: 16px;
+                                margin: 10px 0;
+                            }
+                            .card-product p.price {
+                                font-weight: bold;
+                            }
+
+                        </style>
+
+            <nav id="navproductos">
+                <ul>
+                    <li id="btn-nuevos"><a href="#">Nuevos</a></li>
+                    <li id="btn-mas-recientes"><a href="#">Más Recientes</a></li>
+                    <li id="btn-mejores-vendidos"><a href="#">Mejores Vendidos</a></li>
+                    <li id="btn-en-oferta"><a href="#">En Oferta</a></li>
+                </ul>
+            </nav>
+
+    <main id="main-content">
+    </main>
+
+    <script>
+	document.getElementById('btn-nuevos').addEventListener('click', function(event) {
+		event.preventDefault();
+		cargarProductos('nuevos');
+	});
+
+	document.getElementById('btn-mas-recientes').addEventListener('click', function(event) {
+		event.preventDefault();
+		cargarProductos('masRecientes');
+	});
+
+	document.getElementById('btn-mejores-vendidos').addEventListener('click', function(event) {
+		event.preventDefault();
+		cargarProductos('mejoresVendidos');
+	});
+
+	document.getElementById('btn-en-oferta').addEventListener('click', function(event) {
+		event.preventDefault();
+		cargarProductos('enOferta');
+	});
+
+	function cargarProductos(categoria) {
+		let mainContent = document.getElementById('main-content');
+		let productosHTML = '';
+
+		if (categoria === 'nuevos') {
+			productosHTML = `
+				<div class="card-product">
+					<span class="discount">-13%</span>
+					<img src="../imgg/productonuevo1.jpg">
+					<h3>Producto Nuevo 1</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$1.200.000 COP</p>
+					<p><i class="fa fa-eye"></i> 320</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-29%</span>
+					<img src="../imgg/productonuevo2.png">
+					<h3>Producto Nuevo 2</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$290.000 COP</p>
+					<p><i class="fa fa-eye"></i> 190</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-5%</span>
+					<img src="../imgg/productonuevo3.jpg">
+					<h3>Producto Nuevo 3</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$60.000 COP</p>
+					<p><i class="fa fa-eye"></i> 540</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-17%</span>
+					<img src="../imgg/productonuevo4.jpg">
+					<h3>Producto Nuevo 4</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</div>
+					<p class="price">$310.000 COP</p>
+					<p><i class="fa fa-eye"></i> 1287</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-43%</span>
+					<img src="../imgg/productonuevo5.webp">
+					<h3>Producto Nuevo 5</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$32.000 COP</p>
+					<p><i class="fa fa-eye"></i> 210</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-77%</span>
+					<img src="../imgg/productonuevo6.webp">
+					<h3>Producto Nuevo 6</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$79.900 COP</p>
+					<p><i class="fa fa-eye"></i> 652</p>
+				</div>`;
+		} else if (categoria === 'masRecientes') {
+			productosHTML = `
+				<div class="card-product">
+					<span class="discount">-4%</span>
+					<img src"../imgg/masreciente1.webp">
+					<h3>Producto Más Reciente 1</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$700.000 COP</p>
+					<p><i class="fa fa-eye"></i> 80</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-19%</span>
+					<img src"../imgg/masreciente2.webp">
+					<h3>Producto Más Reciente 2</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$649.000 COP</p>
+					<p><i class="fa fa-eye"></i> 965</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-23%</span>
+					<img src"../imgg/masreciente3.jpeg">
+					<h3>Producto Más Reciente 3</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$32.000 COP</p>
+					<p><i class="fa fa-eye"></i> 210</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-11%</span>
+					<img src"../imgg/masreciente4.webp">
+					<h3>Producto Más Reciente 4</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</div>
+					<p class="price">$210.000 COP</p>
+					<p><i class="fa fa-eye"></i> 1287</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-15%</span>
+					<img src"../imgg/masreciente5.webp">
+					<h3>Producto Más Reciente 5</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$110.000 COP</p>
+					<p><i class="fa fa-eye"></i> 54</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-7%</span>
+					<img src"../imgg/masreciente6.webp">
+					<h3>Producto Más Reciente 6</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$1.049.000 COP</p>
+					<p><i class="fa fa-eye"></i> 654</p>
+				</div>`;
+		} else if (categoria === 'mejoresVendidos') {
+			productosHTML = `
+				<div class="card-product">
+					<span class="discount">-4%</span>
+					<img alt="Producto Mejor Vendido 1">
+					<h3>Producto Mejor Vendido 1</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$700.000 COP</p>
+					<p><i class="fa fa-eye"></i> 80</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-19%</span>
+					<img alt="Producto Mejor Vendido 2">
+					<h3>Producto Mejor Vendido 2</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$649.000 COP</p>
+					<p><i class="fa fa-eye"></i> 965</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-23%</span>
+					<img alt="Producto Mejor Vendido 3">
+					<h3>Producto Mejor Vendido 3</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$32.000 COP</p>
+					<p><i class="fa fa-eye"></i> 210</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-11%</span>
+					<img alt="Producto Mejor Vendido 4">
+					<h3>Producto Mejor Vendido 4</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</div>
+					<p class="price">$210.000 COP</p>
+					<p><i class="fa fa-eye"></i> 1287</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-15%</span>
+					<img alt="Producto Mejor Vendido 5">
+					<h3>Producto Mejor Vendido 5</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$110.000 COP</p>
+					<p><i class="fa fa-eye"></i> 54</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-7%</span>
+					<img alt="Producto Mejor Vendido 6">
+					<h3>Producto Mejor Vendido 6</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$1.049.000 COP</p>
+					<p><i class="fa fa-eye"></i> 654</p>
+				</div>`;
+		} else if (categoria === 'enOferta') {
+			productosHTML = `
+				<div class="card-product">
+					<span class="discount">-30%</span>
+					<img alt="Producto en Oferta 1">
+					<h3>Producto en Oferta 1</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$700.000 COP</p>
+					<p><i class="fa fa-eye"></i> 80</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-19%</span>
+					<img alt="Producto en Oferta 2">
+					<h3>Producto en Oferta 2</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$649.000 COP</p>
+					<p><i class="fa fa-eye"></i> 965</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-23%</span>
+					<img alt="Producto en Oferta 3">
+					<h3>Producto en Oferta 3</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$32.000 COP</p>
+					<p><i class="fa fa-eye"></i> 210</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-11%</span>
+					<img alt="Producto en Oferta 4">
+					<h3>Producto en Oferta 4</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</div>
+					<p class="price">$210.000 COP</p>
+					<p><i class="fa fa-eye"></i> 1287</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-15%</span>
+					<img alt="Producto en Oferta 5">
+					<h3>Producto en Oferta 5</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$110.000 COP</p>
+					<p><i class="fa fa-eye"></i> 54</p>
+				</div>
+
+				<div class="card-product">
+					<span class="discount">-7%</span>
+					<img alt="Producto en Oferta 6">
+					<h3>Producto en Oferta 6</h3>
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+					</div>
+					<p class="price">$1.049.000 COP</p>
+					<p><i class="fa fa-eye"></i> 654</p>
+				</div>`;
+		}
+
+		mainContent.innerHTML = productosHTML;
+	}
+</script>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<style>
+
+/* ********************************** */
+/*               FOOTER               */
+/* ********************************** */
+
+    .footer {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 50px 0;
+    }
+
+    .container-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .footer-col {
+        list-style: none;
+    }
+
+    .footer-col h4 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .footer-col li {
+        margin-bottom: 10px;
+    }
+
+    .footer-col a {
+        text-decoration: none;
+        color: #8a8a8a;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+
+    .footer-col a:hover {
+        color: var(--background-color);
+    }
+
+    .social-media {
+        display: flex;
+        gap: 20px;
+    }
+
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        color: #555;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .social-icon:hover {
+        color: #fff;
+    }
+
+    .facebook:hover {
+        background-color: #3b5998;
+    }
+
+    .twitter:hover {
+        background-color: #1da1f2;
+    }
+
+    .instagram:hover {
+        background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045);
+    }
+
+    .github:hover {
+        background-color: #333;
+    }
+
+    .social-icon i {
+        font-size: 24px;
+    }
+    
+</style>
+
+<footer>
+        <center>
+            <img src="logo/logooo-removebg.png" style="width: 110px; height: 110px;">
+        </center>
+
+            <br>
+            <div class="container container-footer">
+				<div class="footer-col">
+					<h4>Compañía</h4>
+					<ul>
+						<li><a href="#">Sobre nosotros</a></li>
+						<li><a href="#">Nuestro equipo</a></li>
+						<li><a href="#">Carreras</a></li>
+						<li><a href="#">Contáctenos</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Ayuda</h4>
+					<ul>
+						<li><a href="#">Preguntas frecuentes</a></li>
+						<li><a href="#">Envío</a></li>
+						<li><a href="#">Devoluciones</a></li>
+						<li><a href="#">Rastrear pedido</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Categorías</h4>
+					<ul>
+						<li><a href="#">Pesca</a></li>
+						<li><a href="#">Camping</a></li>
+						<li><a href="#">Óptica</a></li>
+						<li><a href="#">Caza Deportiva</a></li>
+					</ul>
+				</div>
+
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+					<div class="social-media">
+        				<a href="https://facebook.com" class="social-icon facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        				<a href="https://twitter.com" class="social-icon twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+        				<a href="https://www.instagram.com/pececitos.cc?igsh=eTk3bWRoZzUxazg3" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+						<a href="https://github.com" class="social-icon github" target="_blank"><i class="fab fa-github"></i></a>
+					</div>
+                </div>
+
+			</div>
+		</footer>
+
+	 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	</body>
+</html>

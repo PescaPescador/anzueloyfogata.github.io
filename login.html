@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Incluye Font Awesome -->
+    <link rel="icon" href="logo/logooo-removebg.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Teko:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="stylelogin.css">
+
+    <title>REGISTER</title>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2 style="font-family: 'Anton SC', sans-serif;">Inicio Sesión</h2>
+            <br>
+            <form action="leer.php" method="post">
+                <div class="user-box">
+                    <i class="fas fa-user-circle"></i>
+                    <input type="text" name="nombre_usuario" required>
+                    <label>Nombre de usuario</label>
+                </div>
+                <div class="user-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" required>
+                    <label>Contraseña</label>
+                </div>
+                <br><br>
+                <a href="index.html">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Iniciar
+                </a>
+            </form>
+            <style>
+                #reg {
+                    padding: 4px;
+                    border-radius: 30px;
+                    font-size: 15px;
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+                #reg:hover {
+                    text-decoration: underline;
+                }
+            </style>
+            <h5> ¿No tienes aún una cuenta? <a id="reg" href="register.html"><i class="fas fa-hand-point-right"></i> Ingresa aquí!</a></h5>
+        </div>
+    </div>
+</body>
+</html>
